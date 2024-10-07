@@ -1,0 +1,30 @@
+﻿@page
+@model MyApp.Namespace.AddEmpleadoModel
+@{
+}
+
+<h2>Agregar Empleado</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="NewEmpleado.Nombre"></label>
+        <input asp-for="NewEmpleado.Nombre" class="form-control" />
+        <span asp-validation-for="NewEmpleado.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewEmpleado.Apellido"></label>
+        <input asp-for="NewEmpleado.Apellido" class="form-control" />
+        <span asp-validation-for="NewEmpleado.Apellido" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewEmpleado.IdPuesto"></label>
+        <input asp-for="NewEmpleado.IdPuesto" class="form-control" />
+        <span asp-validation-for="NewEmpleado.IdPuesto" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NewEmpleado.IdSucursal"></label>
+        <input asp-for="NewEmpleado.IdSucursal" class="form-control" />
+        <span asp-validation-for="NewEmpleado.IdSucursal" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+</form>

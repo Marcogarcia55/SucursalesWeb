@@ -1,0 +1,26 @@
+﻿@page
+@model MyApp.Namespace.EmpleadoModel
+<a asp-page="AddEmpleado" class="btn btn-primary">Agregar Empleado</a>
+@if(Model.Empleados == null){
+    <p>
+        No hay registros de empleados
+    </p>
+}else{
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var empleados in Model.Empleados){
+                <tr>
+                    <td>@empleados.Nombre</td>
+                    <td>@empleados.Apellido</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
